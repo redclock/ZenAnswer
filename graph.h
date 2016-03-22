@@ -22,13 +22,13 @@ public:
         _edgeWeights[fromIndex][toIndex] = weight;
     }
     
-    NodeIndex getNodeIndex(NodeName name)
+    NodeIndex getNodeIndex(NodeName name) const
     {
         auto itr = find(_nodeNames.begin(), _nodeNames.end(), name);
         return (itr == _nodeNames.end()) ? -1 : itr - _nodeNames.begin();
     }
 
-    NodeName getNodeName(NodeIndex index)
+    NodeName getNodeName(NodeIndex index) const
     {
         return _nodeNames[index];
     }
